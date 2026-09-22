@@ -14,8 +14,10 @@ class Main {
     
 */
    
-
-
+int x = 8;
+int y = 5;
+float sum = x + y;
+System.out.println(sum);
 /*  
     Challenge 2:
     Create three variables to assign three grades and Assign values to each grade. 
@@ -24,7 +26,11 @@ class Main {
     
 */
 
-
+double gradex = 60.7;
+double gradey = 90.45;
+double gradez = 40.60;
+double total = (gradex + gradey + gradez);
+System.out.println(total);
 
 /*  
     Challenge 3:
@@ -34,7 +40,8 @@ class Main {
     NOTE: Does it look correct, check with a calculator?
 */
 
-
+double average = (gradex + gradey + gradez)/3;
+System.out.println(average);
 
 /*  
     Challenge 4:
@@ -42,7 +49,11 @@ class Main {
     Declare and assign values to any new variables
 
 */
-  
+
+double A = 4;
+double X = 2;
+double Y = (A /(X + 1));
+System.out.println(Y);
 
 /*  
     Challenge 5:
@@ -53,7 +64,10 @@ class Main {
 */
  
 
-
+double xx = 5;
+double aa= 6;
+double yy = (2*xx * (xx + 1) * (-xx / 2)) / aa;
+System.out.println(yy);
 
 
 
@@ -65,9 +79,10 @@ class Main {
     Declare and assign values to any new variables
 */
  
-
-
-
+double b = 4;
+double h = 12;
+double area = (1.0/2) * (b * h);
+System.out.println(area);
 
 
 /*  
