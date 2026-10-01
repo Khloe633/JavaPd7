@@ -4,10 +4,10 @@
 Challenge 1:
 
 Write a function "print" which takes in a string and displays it to the console. Test the function to make sure it works.
-string print(String){
+String print(String word){
+    system.out.println(word);
 }
 
-System.out.println(print(word));
 
 Challenge 2:
 
