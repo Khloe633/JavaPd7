@@ -18,7 +18,8 @@ double FtoC(double c){
     double F = (c * 1.8) + 32;
     return F;
 }
-   
+
+FtoC();
 
 Challenge 3:
 
