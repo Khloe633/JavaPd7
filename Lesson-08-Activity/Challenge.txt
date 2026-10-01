@@ -47,8 +47,9 @@ Challenge 5:
 Write a function "distance" that calculate the distance between two points (x1,y1) and (x2,y2). The function will need to take paramaters that represents two points.
 Google the formula.
 
-double distance(){
-
+double distance(double x1, double y1, double x2, double y2){
+    double d = Math.sqrt((x2-x1)/(y2-y1));
+    return d;
 }
 
    
