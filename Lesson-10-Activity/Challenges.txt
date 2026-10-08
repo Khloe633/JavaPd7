@@ -39,7 +39,19 @@ return return the following:
     BMI is 40.0	or greater return  Obese  
 
 String BMI(double weight, double height){
-  double bmi =
+  double bmi = ((weight)/(Math.pow(height,2) * 703));
+  if (bmi <= 18.4){
+    return ("Underweight");
+  }
+  else if(bmi >= 18.5 && bmi <= 24.9){
+    return ("Normal");
+  }
+  else if (bmi >= 25.0 && bmi <= 39.9){
+    return ("Overweight");
+  }
+  else{
+    return ("Obese");
+  }
 }
 Challenge 4:
 
@@ -53,7 +65,31 @@ in units of pounds and returns:
       - 10.00 Plus 2 cents per pound over 25 pound, 
         if over 25 pounds.  
 
+  double shippingCost(double wei){
+    if (wei <= 10){
+      return 0.00;
+    }
+    else if(wei > 10 && wei <=15){
+      return 5.00;
+    }
+    else if(wei > 15 && wei <= 25){
+      return 10.00;
+    }
+    else{
+      return (10.00 + (wei * 2));
+    }
+  }
 
 Challenge 5:
 
 Write a function "blueOrViolet" that accepts a light frequency in THz units and returns true for either blue frequence (600-670 THz) or violet frquence (700-750 THz), otherwise return false
+
+
+boolean blueOrViolet(double frequency){
+  if ((frequency >= 600 && frequency <= 670) || (frequency >= 700 && frequency <= 750)){
+    return TRUE;
+  }
+  else{
+    return FALSE;
+  }
+}
