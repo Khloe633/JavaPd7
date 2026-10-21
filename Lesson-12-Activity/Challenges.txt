@@ -22,6 +22,13 @@ boolean collegeCredit(String course){
 Challenge 2:
 Write a function pigLatin which accepts a word and return a new word made up by switch the fist letter to the end of the word and adding a "ay" after. Example: "pig"==> "igpay" Challenge 2:
 
+String  pigLatin(String word){
+  String ay = "ay";
+  String s = ay + word.substring(0);
+  return s;
+}
+
+
 Challenge 3:
 
 Write a function nycLocate that accepts a zip code (as a string) and returns where in NYC the zip code is by examing the first three numbers of the zip code:
@@ -32,13 +39,28 @@ Bronx : 104
 Brooklyn : 112
 Queens : 113, 114, 111
 
-
+String nycLocate(String zipCode){
+  if (zipcode.substring(0,3).equals("100") || zipcode.substring(0,3).equals("101") || zipcode.substring(0,3).equals("102")){
+    return "Manhattan";
+  }
+  else if(zipcode.substring(0,3).equals("103")){
+    return "Staten Island";
+  }
+  else if(zipcode.substring(0,3).equals("104")){
+    return "Bronx";
+  }
+  else if(zipcode.substring(0,3).equals("112")){
+    return "Brooklyn";
+  }
+  else if(zipcode.substring(0,3).equals("113") || zipcode.substring(0,3).equals("114") || zipcode.substring(0,3).equals("111"))
+}
 
 Challenge 4:
 Create a function getMonth that accepts a date in the form MM/DD/YYYY and returns the month: Example 07/21/2023 ==> "July"
 
 String getMonth(int MM, int DD, int YYYY){
     String date = "MM/DD/YYYY";
+
     if (date)
 }
 
@@ -48,3 +70,6 @@ Create a function validatePswd that accepts a password. The password must have 5
 
 Return true if it's valid, otherwise return false.
 
+boolean validatePswd(String password){
+  if (password.substring(0))
+}
