@@ -9,12 +9,15 @@ Starts with:
 51 or 55 - Mastercard
 6011 or 65 - Discovery
 
-String creditCardType(String creditCard){
-    creditCard.substring(0,1).equals("4");{
-    return creditCard;
-    }
+boolean collegeCredit(String course){
+    if(course.substring(5,6).equals("M") ||
+       course.substring(5,6).equals("E") )
+      return true;
+    else
+      return false;
+  }
     
-}
+
 
 Challenge 2:
 Write a function pigLatin which accepts a word and return a new word made up by switch the fist letter to the end of the word and adding a "ay" after. Example: "pig"==> "igpay" Challenge 2:
@@ -33,6 +36,11 @@ Queens : 113, 114, 111
 
 Challenge 4:
 Create a function getMonth that accepts a date in the form MM/DD/YYYY and returns the month: Example 07/21/2023 ==> "July"
+
+String getMonth(int MM, int DD, int YYYY){
+    String date = "MM/DD/YYYY";
+    if (date)
+}
 
 Challenge 5:
 
