@@ -20,14 +20,21 @@ int addTwoNumbers(){
     int num1 = (math.random()*(50-0+1));
     int num 2 = (math.random()*(50-0+1));
     print("What is (num1) + (num2)?");
-    String answer = 
+    String answer = num1 + num2;
     String guess = Input.readString();
-    while (!(answer))
+    while (!(answer == guess)){
+        print ("Wrong! Try again");
+        guess = Input.readString;
+    }
+    print ("Correct!");
 }
 
 Challenge 3:
 Write a function GCF that accepts two integers, calculates and returns the GCF (greatest common facter) of the two integers.
 
+int GCF(int numberOne, int numberTwo){
+int x 
+}
 
 Challenge 4:
 Write a menu function called menu that allows a user to choose one of the three functions written above. Also include a choice to exit out.
