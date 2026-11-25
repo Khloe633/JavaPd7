@@ -9,8 +9,7 @@ class Main {
 
     // Challenge1: Read in the file Original.txt and store it in a variable
    
-file.readInput(Original.txt);
-    
+msg = Input.readFile("Original.txt");    
   }
 
    // Challenge2: 
@@ -18,7 +17,27 @@ file.readInput(Original.txt);
   //  and create a new string that using a caesar cipher 
   // by shifting all ascii values by 3.  Don't worry about
   // wrapping arount the alphabet.
-String encode = file;
+String encode (String txt){
+  String bld = "";
+  for(int x = 0;  x < txt.length()-1; x++){
+    char ch;
+    int ascii;
+    ch = txt.charAt(x);
+    ascii = (int)ch;
+    
+    if(ascii == 90){
+      ascii = 67;
+    }
+    else if(ascii == 122){
+      ascii = 100;
+    }
+    else{
+      ascii += 3;
+    }
+    bld += (char)ascii;
+  }
+  return bld;
+}
   // Challenge3: 
   //  Write the function decode that takes in a string
   //  and reverses what the function in chanllenge 2
