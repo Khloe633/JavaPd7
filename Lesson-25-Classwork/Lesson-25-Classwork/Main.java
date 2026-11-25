@@ -8,8 +8,18 @@ class Main {
   void init(){
 
     // Challenge1: Read in the file Original.txt and store it in a variable
-   
-msg = Input.readFile("Original.txt");    
+
+msg = Input.readFile("Original.txt");  
+String encodedMsg = encode(msg);
+Input.writeFile("Encode.txt", encodedMsg);
+
+encodedMsg = Input.readFile("Encode.txt");
+String decodedMsg = decode(encodedMsg);
+Input.writeFile("Decoded.txt", decodedMsg);
+
+System.out.println("Original msg: " + msg);
+System.out.println("Encoded msg: " + encodedMsg);
+
   }
 
    // Challenge2: 
@@ -43,7 +53,28 @@ String encode (String txt){
   //  and reverses what the function in chanllenge 2
   //  so that you get the original message.
 
-  
+  String decode(String txt){
+     String bld = "";
+  for(int x = 0;  x < txt.length()-1; x++){
+    char ch;
+    int ascii;
+    ch = txt.charAt(x);
+    ascii = (int)ch;
+    
+    if(ascii == 90){
+      ascii = 67;
+    }
+    else if(ascii == 122){
+      ascii = 100;
+    }
+    else{
+      ascii -=3;
+    }
+    bld += (char)ascii;
+  }
+  return bld;
+  }
+
   int randInt(int lower, int upper){
     int range = upper - lower;
     return (int)(Math.random()*range+lower);
